@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Sqlite" id="Project-1c64" database="Sqlite" >
+	<schema name="Default" >
+		<table name="pessoa" >
+			<comment><![CDATA[tabela de pessoas]]></comment>
+			<column name="id" type="INTEGER" jt="4" mandatory="y" />
+			<column name="nome" type="VARCHAR" length="255" jt="12" />
+			<column name="idade" type="INTEGER" jt="4" />
+			<column name="peso" type="FLOAT" length="8" decimal="2" jt="7" />
+			<column name="altura" type="FLOAT" length="8" decimal="2" jt="7" />
+			<index name="pk_pessoa" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+		</table>
+	</schema>
+	<layout name="Main Layout" id="Layout-1579" show_relation="columns" >
+		<entity schema="Default" name="pessoa" color="C1D8EE" x="51" y="51" />
+		<script name="SQL_Editor" id="Editor-138c" language="SQL" >
+			<string><![CDATA[select * from pessoa]]></string>
+		</script>
+	</layout>
+</project>
